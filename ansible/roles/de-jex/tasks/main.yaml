@@ -5,7 +5,7 @@
     - jex
 
 - name: update jex
-  shell: docker pull {{docker.user}}/jex:{{docker.tag}}
+  shell: docker pull {{jex.dockerrepo}}/jex:{{docker.tag}}
   tags:
     - jex
     - docker_pull
