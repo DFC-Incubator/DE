@@ -16,14 +16,14 @@
     - jex
 
 - name: install jex
-  shell: docker run --rm -v /usr/local/lib/jex:/jex --entrypoint "cp" {{docker.user}}/jex:{{docker.tag}} /jex-standalone.jar /jex/jex-standalone.jar
+  shell: docker run --rm -v /usr/local/lib/jex:/jex --entrypoint "cp" {{jex.dockerrepo}}/jex:{{docker.tag}} /jex-standalone.jar /jex/jex-standalone.jar
   tags:
     - jex
     - docker_pull
 
 - name: install jex logback.xml file
   sudo: yes
-  shell: docker run --rm -v /usr/local/lib/jex:/jex --entrypoint "cp" {{docker.user}}/jex:{{docker.tag}} /logback.xml /jex/logback.xml
+  shell: docker run --rm -v /usr/local/lib/jex:/jex --entrypoint "cp" {{jex.dockerrepo}}/jex:{{docker.tag}} /logback.xml /jex/logback.xml
   tags:
     - jex
     - docker_pull
@@ -35,7 +35,7 @@
     - docker_pull
 
 - name: install jex submitnerator.sh file
-  shell: docker run --rm -v /usr/local/bin/:/jex --entrypoint "cp" {{docker.user}}/jex:{{docker.tag}} /submitnerator.sh /jex/submitnerator.sh
+  shell: docker run --rm -v /usr/local/bin/:/jex --entrypoint "cp" {{jex.dockerrepo}}/jex:{{docker.tag}} /submitnerator.sh /jex/submitnerator.sh
   tags:
     - jex
     - docker_pull
