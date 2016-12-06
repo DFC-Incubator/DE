@@ -60,6 +60,7 @@
    "rank = mips\n"
    "arguments = \"iplant.sh\"\n"
    "output = script-output.log\n"
+   "+ServerClass = \"CUDA\"\n"
    "error = script-error.log\n"
    "log = condor.log\n"
    "request_disk = " (cfg/request-disk) "\n"
