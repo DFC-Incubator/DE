@@ -367,7 +367,7 @@
        path to the executable since they're the same across all of the Condor
        nodes."
       [step-map]
-      "docker")
+      "nvidia-docker")
 
 (defn arguments
       "Takes in a step map map and returns the formatted arguments
